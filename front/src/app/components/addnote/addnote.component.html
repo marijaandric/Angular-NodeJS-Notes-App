@@ -1,0 +1,45 @@
+<div id="background">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="content">
+      <h1>Add note</h1>
+      <br><br>
+      <div id="login">
+          <div id="content">
+              <textarea type="text" class="mininput" placeholder="Enter title" [(ngModel)]="note.title"></textarea>
+          </div>
+          <textarea type="text" class="border-only" placeholder="Enter note" [(ngModel)]="note.note"></textarea>
+      </div>
+      <form>
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority" [(ngModel)]="note.priority">
+              <option value="2">Low</option>
+              <option value="1">High</option>
+          </select>
+  
+          <label for="noteType">Public type:</label>
+          <select id="noteType" name="noteType" [(ngModel)]="selectedNoteType">
+              <option value="for_me">Note for me</option>
+              <option value="public">Public Note</option>
+          </select>
+  
+          <div id="publicOptions">
+              <label for="type">Type:</label>
+              <select id="type" name="type" [(ngModel)]="note.type">
+                  <option value="1">Happy</option>
+                  <option value="2">Sad</option>
+                  <option value="3">Love</option>
+                  <option value="4">Warning</option>
+                  <option value="5">Activity</option>
+              </select>
+          </div>
+
+          <div style="color: red;display: hidden;">
+            {{err}}
+          </div>
+      </form>
+      <button (click)="addNote()">Add</button>
+  </div>
+  
+</div>

@@ -1,0 +1,12 @@
+<div id="background">
+    <div id="login">
+        <form>
+          <h1>Register</h1>
+          <input type="text" name="name" placeholder="Name" [(ngModel)]="formData.name">
+          <input type="text" name="username" placeholder="Username" [(ngModel)]="formData.username">
+          <input type="password" name="password" placeholder="Password" [(ngModel)]="formData.password">
+          <button (click)="onSubmit()">Sign in</button>
+          <p routerLink="/login">You have account? Sign in.</p>
+        </form>
+    </div>
+</div>

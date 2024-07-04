@@ -1,0 +1,19 @@
+<div id="notes" >
+    <div id="content">
+        <div *ngIf="!isEditing">
+            <img style="cursor: pointer;" src={{svgPath}} (click)="toggleEditMode()">
+            <h2>{{title}}</h2>
+            <p>{{note}}</p>
+        </div>
+        <div *ngIf="isEditing" style="display: flex; flex-direction: column;">
+            <textarea [(ngModel)]="editedTitle">{{ title }}</textarea>
+            <textarea style="height: 100px;" [(ngModel)]="editedNote">{{ note }}</textarea>
+            <button (click)="edit()">Save</button>
+        </div>
+        
+        <div style="display: flex;flex-direction: row;justify-content: space-between;" *ngIf="checkUser()">
+            <img style="cursor: pointer;" src="../../../assets/icons/edit.svg" (click)="toggleEditMode()">
+            <img style="cursor: pointer;" src="../../../assets/icons/trash.svg" (click)="delete()">
+        </div>
+    </div>
+</div>

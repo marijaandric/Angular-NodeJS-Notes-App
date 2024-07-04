@@ -1,0 +1,38 @@
+<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label for="tabone">Important Notes</label>
+  <div class="tab">
+    <h1>Important Notes</h1>
+    <div class="sticky-notes-grid">
+      <app-stickynotes *ngFor="let note of myPriorityNotes" [color]="note.type" [title]="note.title" [note]="note.note" [id]="note._id" [wholeNote]="note" (isDeleted)="handleNotify($event)"></app-stickynotes>
+  </div>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo" >
+  <label for="tabtwo">My Notes</label>
+  <div class="tab">
+    <h1>My notes</h1>
+    <div class="sticky-notes-grid">
+      <app-stickynotes *ngFor="let note of myNotes" [color]="note.type" [title]="note.title" [note]="note.note" [id]="note._id" [wholeNote]="note" (isDeleted)="handleNotify($event)"></app-stickynotes>
+    </div>
+  </div>
+  
+  <input type="radio" name="tabs" id="tabthree">
+  <label for="tabthree">Random Notes</label>
+  <div class="tab">
+    <h1>Random Notes</h1>
+    <div class="sticky-notes-grid">
+      <app-stickynotes *ngFor="let note of randomNotes" [color]="note.type" [title]="note.title" [note]="note.note" [id]="note._id" [wholeNote]="note" (isDeleted)="handleNotify($event)"></app-stickynotes>
+  </div>
+  </div>
+  
+  <input type="radio" name="tabs" id="tabfour">
+  <label for="tabfour">Public Notes</label>
+  <div class="tab">
+    <h1>Public Notes</h1>
+    <div class="sticky-notes-grid">
+      <app-stickynotes *ngFor="let note of publicNotes" [color]="note.type" [title]="note.title" [note]="note.note" [id]="note._id" [wholeNote]="note" (isDeleted)="handleNotify($event)"></app-stickynotes>
+  </div>
+  </div>
+
+</div>
