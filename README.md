@@ -26,7 +26,7 @@ This is a simple notes management application built using Angular for the fronte
 2. **Backend setup:**
 
     ```bash
-    cd backend
+    cd back
     npm install
     ```
 
@@ -43,7 +43,7 @@ This is a simple notes management application built using Angular for the fronte
     Open a new terminal window and navigate to the `frontend` directory:
 
     ```bash
-    cd frontend
+    cd front
     npm install
     ```
 
@@ -61,7 +61,7 @@ This is a simple notes management application built using Angular for the fronte
 
 - **Login or register**
 - **Create Note:** Click on the "Add Note" button, fill in the details, and save.
-- **View Notes:** Notes are listed on the homepage.
+- **View Notes:** Notes are listed and filtered on the homepage.
 - **Edit Note:** Click on the edit icon next to a note to update its details.
 - **Delete Note:** Click on the delete icon next to a note to remove it.
 
@@ -77,9 +77,5 @@ This is a simple notes management application built using Angular for the fronte
 ### Frontend (Angular)
 
 - `src/app/app.module.ts` - Main module file
-- `src/app/components` - Contains Angular components (NoteList, NoteForm, etc.)
+- `src/app/components` - Contains Angular components (homepage, sticky-notes, etc.)
 - `src/app/services/note.service.ts` - Angular service for HTTP requests to the backend
-
-## API Endpoints
-
-
